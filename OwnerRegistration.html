@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Registration</title>
+    <style>
+        body {
+            background-image: url('image/vege.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+             height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: rgba(50, 150, 50, 0.9);
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: greenyellow;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: green;
+            transform: scale(1.05);
+        }
+
+        a {
+            text-decoration: none;
+            color: green;
+            font-size: 14px;
+             }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Owner Registration</h1>
+        <form action="OwnerRegistrationServlet" method="POST">
+            <input type="text" name="uname" placeholder="Username" required>
+            <input type="password" name="pword" placeholder="Password" required>
+            <input type="text" name="fname" placeholder="First Name" required>
+            <input type="text" name="lname" placeholder="Last Name" required>
+            <input type="text" name="addr" placeholder="Address" required>
+            <input type="email" name="mid" placeholder="Email" required>
+            <input type="text" name="phno" placeholder="Phone Number" required>
+            <input type="submit" value="Register">
+        </form>
+        <a href="OwnerLogin.jsp">Back to Login</a>
+    </div>
+</body>
+</html>
